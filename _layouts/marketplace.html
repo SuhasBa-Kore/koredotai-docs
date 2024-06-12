@@ -240,9 +240,9 @@ $('.nested-details summary').on('click', function (e) {
 
   
          //  $('body').perfectScrollbar();
-           const ps= new PerfectScrollbar('body');
+           let ps= new PerfectScrollbar('body');
             setTimeout(() => {
-            ps.update(); }, 1000);
+            ps.update(); }, 1);
                window.parent.postMessage({
                 frameStatus:'loaded',
                 action:'guidedTour'
