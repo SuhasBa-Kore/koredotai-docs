@@ -242,7 +242,7 @@ $('.nested-details summary').on('click', function (e) {
          //  $('body').perfectScrollbar();
            let ps= new PerfectScrollbar('body');
             setTimeout(() => {
-            ps.update(); }, 0.001);
+            ps.update(); }, 0.1);
                window.parent.postMessage({
                 frameStatus:'loaded',
                 action:'guidedTour'
