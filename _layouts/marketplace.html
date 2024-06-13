@@ -239,18 +239,17 @@ $('.nested-details summary').on('click', function (e) {
             });
 
   
-           window.ps= new PerfectScrollbar('body');
-               window.parent.postMessage({
-                frameStatus:'loaded',
-                action:'guidedTour'
-               }, '*');
-             // ps.update();
-            window.addEventListener('message', (event) => {
-                if (event.data && event.data.action === 'domCreatedUsingMdFile') {
-                    console.log('Event received:', event.data);
-                    ps.update(); // Assuming ps is defined somewhere else in your code
-                }
-            });
+           // window.ps= new PerfectScrollbar('body');
+           //     window.parent.postMessage({
+           //      frameStatus:'loaded',
+           //      action:'guidedTour'
+           //     }, '*');
+            // window.addEventListener('message', (event) => {
+            //     if (event.data && event.data.action === 'domCreatedUsingMdFile') {
+            //         console.log('Event received:', event.data);
+            //         ps.update(); // Assuming ps is defined somewhere else in your code
+            //     }
+            // });
 
         
         });
@@ -269,6 +268,12 @@ $('.nested-details summary').on('click', function (e) {
     }
     document.addEventListener('DOMContentLoaded', getDimensions);
              //  $('body').perfectScrollbar();
+        window.ps= new PerfectScrollbar('body');
+               window.parent.postMessage({
+                frameStatus:'loaded',
+                action:'guidedTour'
+               }, '*');
+             ps.update();
            
     </script>
    
