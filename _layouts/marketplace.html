@@ -241,12 +241,12 @@ $('.nested-details summary').on('click', function (e) {
   
          //  $('body').perfectScrollbar();
            let ps= new PerfectScrollbar('body');
-            setTimeout(() => {
-            ps.update(); }, 100);
                window.parent.postMessage({
                 frameStatus:'loaded',
                 action:'guidedTour'
                }, '*');
+            setTimeout(() => {
+            ps.update(); }, 100);
         
         });
         function getDimensions() {
