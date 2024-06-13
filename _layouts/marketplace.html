@@ -245,14 +245,14 @@ $('.nested-details summary').on('click', function (e) {
                 frameStatus:'loaded',
                 action:'guidedTour'
                }, '*');
-            //  window.addEventListener('message', (event: MessageEvent) => {
-            //   // Check the event data and perform necessary actions
-            //   if (event.data && event.data.action === 'domCreatedUsingMdFile') {
-            //     // Perform the required actions after receiving the event
-            //     console.log('Event received:', event.data);
-            //     ps.update();
-            //   }
-            // });
+             window.addEventListener('message', (event: MessageEvent) => {
+              // Check the event data and perform necessary actions
+              if (event.data && event.data.action === 'domCreatedUsingMdFile') {
+                // Perform the required actions after receiving the event
+                console.log('Event received:', event.data);
+                ps.update();
+              }
+            });
         
         });
         function getDimensions() {
