@@ -245,6 +245,7 @@ $('.nested-details summary').on('click', function (e) {
                 frameStatus:'loaded',
                 action:'guidedTour'
                }, '*');
+            debugger;
              window.addEventListener('message', (event: MessageEvent) => {
               // Check the event data and perform necessary actions
               if (event.data && event.data.action === 'domCreatedUsingMdFile') {
