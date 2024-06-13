@@ -239,7 +239,18 @@ $('.nested-details summary').on('click', function (e) {
             });
 
   
-           
+           window.ps= new PerfectScrollbar('body');
+               window.parent.postMessage({
+                frameStatus:'loaded',
+                action:'guidedTour'
+               }, '*');
+             // ps.update();
+            document.addEventListener('domCreatedUsingMdFile', (event) => {
+                // if (event.data && event.data.action === 'domCreatedUsingMdFile') {
+                    console.log('Event received:', event.data);
+                    ps.update();
+                // }
+            });
         
         });
         function getDimensions() {
@@ -257,12 +268,7 @@ $('.nested-details summary').on('click', function (e) {
     }
     document.addEventListener('DOMContentLoaded', getDimensions);
              //  $('body').perfectScrollbar();
-           window.ps= new PerfectScrollbar('body');
-               window.parent.postMessage({
-                frameStatus:'loaded',
-                action:'guidedTour'
-               }, '*');
-             ps.update();
+           
     </script>
    
     {% if page.datatable == true %}
