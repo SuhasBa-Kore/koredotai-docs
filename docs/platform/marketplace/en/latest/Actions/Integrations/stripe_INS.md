@@ -5,6 +5,8 @@ permalink: platform/instructions/en/latest/Actions/stripe_INS
 
 ---
 
+<base target="_blank">
+
 **Authorization**
  
 To connect to a Stripe account, Kore.ai uses Basic Auth. The developer can use pre-authorized credentials during the configuration process or let the end user authorize during the conversation by creating an authorization profile. Learn More.
