@@ -4,6 +4,7 @@ title: Zendesk
 permalink: platform/marketplace/en/latest/Actions/Integrations/zendesk_DESC
 
 ---
+<base target="_blank">
 
 ### Description
 
